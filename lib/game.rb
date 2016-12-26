@@ -1,6 +1,6 @@
 class Game
   ACTIONS = [
-    :north, :east, :south, :west, :status
+    :north, :east, :south, :west, :status, :exit, :close
   ]
 
   def initialize
@@ -21,7 +21,9 @@ private
       status
 
       action = input
+
       next unless ACTIONS.include? action
+      take_action(action)
     end
   end
 
@@ -35,5 +37,9 @@ private
     @steps += 1
 
     puts @current_room
+  end
+
+  def take_action(action)
+    exit if action == :exit || action == :close
   end
 end
