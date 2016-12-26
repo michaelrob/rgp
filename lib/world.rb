@@ -17,4 +17,8 @@ class World
 
   def move_west()
   end
+
+  def get_room()
+    @rooms[entity.x_pos][entity.y_pos] ||= Room.new
+  end
 end
