@@ -20,16 +20,20 @@ private
       # ToDo: we'll need to flesh this out a bit more
       status
 
-
-
-      puts "you have taken #{@steps} steps"
-
-      steps_to_take = gets.to_i
-      @steps += 1
+      action = input
+      next unless ACTIONS.include? action
     end
   end
 
+  def input
+    puts "give me something to do"
+    gets.chomp.to_sym
+  end
+
   def status
+    puts "you have taken #{@steps} steps"
+    @steps += 1
+
     puts @current_room
   end
 end
