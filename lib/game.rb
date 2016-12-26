@@ -43,5 +43,7 @@ private
   # the actions could get really really big
   def take_action(action)
     exit if action == :exit || action == :close
+
+    @player.status if action == :status
   end
 end
