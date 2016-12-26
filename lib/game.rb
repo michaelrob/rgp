@@ -14,6 +14,12 @@ class Game
 private
 
   def start_game
+    # We want to get initial details about the player
+    # Name, age, class maybe
+    puts "Hello adventurer."
+    puts "Do you have a name?"
+    @player.name = gets.chomp.to_sym
+
     while @player.alive?
       @current_room = @world.get_room(@player)
 
