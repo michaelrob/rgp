@@ -1,5 +1,6 @@
 class Room
-
+  attr_accessor :size, :content, :adjective
+  
   def initialize
     @content = get_content
     @size = get_size
