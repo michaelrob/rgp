@@ -3,6 +3,8 @@ class Player
 
   def initialize
     @hit_points = MAX_HITPOINTS
+    @attack_power = 1
+    @x_pos, @y_pos = 0, 0
   end
 
   def name
