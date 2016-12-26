@@ -4,5 +4,8 @@ task :default => [:run]
 
 desc "Text RPG"
 task "run" do
+  $LOAD_PATH.unshift(File.dirname(__FILE__), "lib")
+  Dir["lib/**.*"].each { |file| require_relative file }
+
   Game.new
 end
