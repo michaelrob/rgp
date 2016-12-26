@@ -14,7 +14,7 @@ class Game
 private
 
   def start_game
-    while @player.alive? && steps <= 100
+    while @player.alive?
       @current_room = @world.get_room(@player)
 
       # ToDo: we'll need to flesh this out a bit more
