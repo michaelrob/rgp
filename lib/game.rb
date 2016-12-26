@@ -5,6 +5,8 @@ class Game
     start_game
   end
 
+private
+
   def start_game
     while true
       puts "you have taken #{@steps_taken} steps"
