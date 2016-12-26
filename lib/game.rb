@@ -6,7 +6,7 @@ class Game
 
   def start_game
     while true
-      puts "you have taken #{@steps_taken}"
+      puts "you have taken #{@steps_taken} steps"
       @steps_taken += 1
     end
   end
