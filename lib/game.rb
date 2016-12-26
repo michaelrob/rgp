@@ -1,16 +1,8 @@
 class Game
-  MAX_HITPOINTS = 100
-
   def initialize
-    @hit_points = MAX_HITPOINTS
     @steps_taken = 0
+    @player = Player.new
     start_game
-  end
-
-  # mmm this could do with some cleaning up
-  # we should move it into its own class
-  def hurt_player(amount)
-    @hit_points -= amount
   end
 
   def start_game
