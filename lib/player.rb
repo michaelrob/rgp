@@ -1,4 +1,7 @@
 class Player
+  attr_accessor :hit_points, :attack_power
+  attr_accessor :x_pos, :y_pos
+
   MAX_HITPOINTS = 100
 
   def initialize
