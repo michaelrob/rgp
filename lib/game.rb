@@ -1,4 +1,8 @@
 class Game
+  ACTIONS = [
+    :north, :east, :south, :west, :status
+  ]
+  
   def initialize
     @steps = 0
     @player = Player.new
