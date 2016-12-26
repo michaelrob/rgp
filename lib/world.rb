@@ -3,5 +3,6 @@ class World
   WIDTH = 10
 
   def initialize
+    @rooms = Array.new(HEIGHT, Array.new(WIDTH))
   end
 end
