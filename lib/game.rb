@@ -14,11 +14,7 @@ class Game
 private
 
   def start_game
-    # We want to get initial details about the player
-    # Name, age, class maybe
-    puts "Hello adventurer."
-    puts "Do you have a name?"
-    @player.name = gets.chomp.to_sym
+    initialize_game
 
     while @player.alive?
       @current_room = @world.get_room(@player)
@@ -31,6 +27,14 @@ private
       next unless ACTIONS.include? action
       take_action(action)
     end
+  end
+
+  def initialize_game
+    # We want to get initial details about the player
+    # Name, age, class maybe
+    puts "Hello adventurer."
+    puts "Do you have a name?"
+    @player.name = gets.chomp.to_sym
   end
 
   def input
