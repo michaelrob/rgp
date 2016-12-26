@@ -31,4 +31,7 @@ class Player
     puts "Game Over"
     exit
   end
+
+  def status
+  end
 end
