@@ -14,8 +14,16 @@ class Player
     @name
   end
 
+  def title
+    @title
+  end
+
   def name=(new_name)
     @name = new_name
+  end
+
+  def title=(new_title)
+    @title = new_title
   end
 
   def hurt(amount)
@@ -34,7 +42,7 @@ class Player
 
   def status
     puts "Player Status"
-    putst "Name: #{@name}"
+    putst "#{@name} - #{@title}"
     puts "Current hitpoints: #{@hit_points}"
   end
 end
