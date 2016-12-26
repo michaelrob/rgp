@@ -20,6 +20,10 @@ class Player
     kill if @hit_points <= 0
   end
 
+  def alive?
+    @hit_points > 0
+  end
+
   def kill
     puts "Game Over"
     exit
