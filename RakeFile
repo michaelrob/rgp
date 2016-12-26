@@ -4,5 +4,5 @@ task :default => [:run]
 
 desc "Text RPG"
 task "run" do
-
+  Game.new
 end
