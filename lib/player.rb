@@ -13,12 +13,12 @@ class Player
     @name = new_name
   end
 
-  def hurt_player(amount)
+  def hurt(amount)
     @hit_points -= amount
-    kill_player if @hit_points <= 0
+    kill if @hit_points <= 0
   end
 
-  def kill_player
+  def kill
     puts "Game Over"
     exit
   end
