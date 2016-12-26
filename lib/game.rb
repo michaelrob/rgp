@@ -39,6 +39,8 @@ private
     puts @current_room
   end
 
+  # toDo: at some point we should switch this into its own class
+  # the actions could get really really big
   def take_action(action)
     exit if action == :exit || action == :close
   end
