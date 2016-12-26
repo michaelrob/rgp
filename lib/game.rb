@@ -1,6 +1,6 @@
 class Game
   def initialize
-    @steps_taken = 0
+    @steps = 0
     @player = Player.new
     start_game
   end
@@ -8,10 +8,11 @@ class Game
 private
 
   def start_game
-    while @player.alive?
-      puts "you have taken #{@steps_taken} steps"
+    while @player.alive? && steps <= 100
+      puts "you have taken #{@steps} steps"
+
       steps_to_take = gets.to_i
-      @steps_taken += 1
+      @steps += 1
     end
   end
 end
