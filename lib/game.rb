@@ -1,6 +1,6 @@
 class Game
   ACTIONS = [
-    :north, :east, :south, :west, :status, :exit, :close
+    :north, :east, :south, :west, :status, :exit, :close, :help
   ]
 
   def initialize
@@ -40,6 +40,10 @@ private
     @player.title = gets.chomp.to_sym
   end
 
+  def help
+    puts "Help text"
+  end
+
   def input
     puts "give me something to do"
     gets.chomp.to_sym
@@ -58,5 +62,7 @@ private
     exit if action == :exit || action == :close
 
     @player.status if action == :status
+
+    help if action == :help
   end
 end
