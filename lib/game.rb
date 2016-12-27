@@ -42,32 +42,9 @@ private
     puts "=============================="
   end
 
-  def help
-    # toDo: flesh this out a bit more
-    # toDo: this still moves the player one step, we'll need to fix that up
-    puts "RGP -- Text Based RPG"
-    puts "Action commands"
-    puts "-----------------------------"
-    puts "north: moves the character north"
-    puts "south: moves the character"
-    puts "east: moves the character east"
-    puts "west: moves the character west"
-    puts "status: shows the current player status"
-    puts "exit: exits the game"
-  end
-
   def input
     puts "What should I do?"
     gets.chomp.to_sym
-  end
-
-  def status
-    puts "You have taken #{@steps} steps"
-    puts "You are at map coordinates [#{@player.x_pos}, #{@player.y_pos}]"
-
-    puts @current_room
-    # toDo: we'll need to also list content in the room
-    # puts "you see @room.content"
   end
 
   # toDo: at some point we should switch this into its own class
@@ -83,5 +60,28 @@ private
     @world.move_south(@player) if action == :south
     @world.move_east(@player)  if action == :east
     @world.move_west(@player)  if action == :west
+  end
+
+  def help
+    # toDo: flesh this out a bit more
+    # toDo: this still moves the player one step, we'll need to fix that up
+    puts "RGP -- Text Based RPG"
+    puts "Action commands"
+    puts "-----------------------------"
+    puts "north: moves the character north"
+    puts "south: moves the character"
+    puts "east: moves the character east"
+    puts "west: moves the character west"
+    puts "status: shows the current player status"
+    puts "exit: exits the game"
+  end
+
+  def status
+    puts "You have taken #{@steps} steps"
+    puts "You are at map coordinates [#{@player.x_pos}, #{@player.y_pos}]"
+
+    puts @current_room
+    # toDo: we'll need to also list content in the room
+    # puts "you see @room.content"
   end
 end
