@@ -12,6 +12,7 @@ class Room
   end
 
 private
+
   def get_content
   end
 
