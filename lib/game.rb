@@ -78,14 +78,14 @@ private
   # the actions could get really really big
   def take_action(action)
     # Non state changing actions
-    exit if action == :exit || action == :close
-    help if action == :help
+    exit           if action == :exit || action == :close
+    help           if action == :help
     @player.status if action == :status
 
     # State changing actions
     @world.move_north(@player) if action == :north
     @world.move_south(@player) if action == :south
-    @world.move_east(@player) if action == :east
-    @world.move_west(@player) if action == :west
+    @world.move_east(@player)  if action == :east
+    @world.move_west(@player)  if action == :west
   end
 end
