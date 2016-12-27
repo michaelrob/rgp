@@ -49,7 +49,7 @@ private
   end
 
   def input
-    puts "give me something to do"
+    puts "What should I do?"
     gets.chomp.to_sym
   end
 
