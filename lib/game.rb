@@ -37,8 +37,9 @@ private
     puts "Do you have a name?"
     @player.name = gets.chomp.to_sym
 
-    puts "Welcome #{@player.name}, every great adventurer has a title, what might yours be?"
-    @player.title = gets.chomp.to_sym
+    puts "=============================="
+    puts "#{@player.name} begins his adventure. Go forward and see what treasure awaits you!!"
+    puts "=============================="
   end
 
   def help
