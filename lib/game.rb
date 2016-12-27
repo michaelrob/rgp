@@ -1,6 +1,9 @@
 class Game
   ACTIONS = [
-    :north, :east, :south, :west, :status, :exit, :close, :help
+    :north, :east, :south, :west
+  ]
+  MISC_ACTIONS = [
+    :help, :status, :exit, :close
   ]
 
   def initialize
@@ -14,18 +17,21 @@ class Game
 private
 
   def start_game
+    action = ""
     initialize_game
 
     while @player.alive?
       @current_room = @world.get_room(@player)
 
-      # ToDo: we'll need to flesh this out a bit more
-      status
-      @steps += 1
+      unless MISC_ACTIONS.include? action
+        # ToDo: we'll need to flesh this out a bit more
+        status
+        @steps += 1
 
-      action = input
+        action = input
+      end
 
-      next unless ACTIONS.include? action
+      next unless ACTIONS.include?(action) || MISC_ACTIONS.include?(action) 
       take_action(action)
     end
   end
