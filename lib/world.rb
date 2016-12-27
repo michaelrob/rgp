@@ -11,11 +11,11 @@ class World
   end
 
   def move_south(player)
-    player.y_pos += 1 if player.y_pos < WORLD_HEIGHT - 1
+    player.y_pos += 1 if player.y_pos < HEIGHT - 1
   end
 
   def move_east(player)
-    player.x_pos += 1 if player.x_pos < WORLD_HEIGHT - 1
+    player.x_pos += 1 if player.x_pos < HEIGHT - 1
   end
 
   def move_west(player)
