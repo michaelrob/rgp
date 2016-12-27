@@ -21,6 +21,7 @@ private
 
       # ToDo: we'll need to flesh this out a bit more
       status
+      @steps += 1
 
       action = input
 
@@ -52,7 +53,6 @@ private
 
   def status
     puts "you have taken #{@steps} steps"
-    @steps += 1
 
     puts @current_room
   end
