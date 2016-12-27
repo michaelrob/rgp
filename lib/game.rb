@@ -40,8 +40,6 @@ private
     puts "=============================="
     puts "#{@player.name} begins his adventure. Go forward and see what treasure awaits you!!"
     puts "=============================="
-
-    wait 2
   end
 
   def help
@@ -56,8 +54,6 @@ private
     puts "west: moves the character west"
     puts "status: shows the current player status"
     puts "exit: exits the game"
-
-    wait 2
   end
 
   def input
