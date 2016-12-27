@@ -23,6 +23,6 @@ class World
   end
 
   def get_room(player)
-    @rooms[entity.x_pos][entity.y_pos] ||= Room.new
+    @rooms[player.x_pos][player.y_pos] ||= Room.new
   end
 end
