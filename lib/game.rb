@@ -54,9 +54,12 @@ private
   end
 
   def status
-    puts "you have taken #{@steps} steps"
+    puts "You have taken #{@steps} steps"
+    puts "You are at map coordinates [#{@player.x_pos}, #{@player.y_pos}]"
 
     puts @current_room
+    # toDo: we'll need to also list content in the room
+    # puts "you see @room.content"
   end
 
   # toDo: at some point we should switch this into its own class
