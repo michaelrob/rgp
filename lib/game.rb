@@ -23,7 +23,7 @@ private
     while @player.alive?
       @current_room = @world.get_room(@player)
 
-      unless MISC_ACTIONS.include? action
+      unless MISC_ACTIONS.include?(action)
         # ToDo: we'll need to flesh this out a bit more
         status
         @steps += 1
@@ -31,7 +31,7 @@ private
         action = input
       end
 
-      next unless ACTIONS.include?(action) || MISC_ACTIONS.include?(action) 
+      next unless ACTIONS.include?(action) || MISC_ACTIONS.include?(action)
       take_action(action)
     end
   end
