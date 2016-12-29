@@ -17,19 +17,18 @@ class Game
 private
 
   def start_game
+    action = ""
     initialize_game
 
     while @player.alive?
-      action = ""
 
       @current_room = @world.get_room(@player)
 
+      action = input
       unless MISC_ACTIONS.include?(action)
         # ToDo: we'll need to flesh this out a bit more
         status
         @steps += 1
-
-        action = input
       end
 
       next unless ACTIONS.include?(action) || MISC_ACTIONS.include?(action)
@@ -72,6 +71,8 @@ private
   def help
     # toDo: flesh this out a bit more
     # toDo: this still moves the player one step, we'll need to fix that up
+    puts ""
+    puts ""
     puts "RGP -- Text Based RPG"
     puts "Action commands"
     puts "-----------------------------"
