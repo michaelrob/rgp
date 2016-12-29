@@ -17,10 +17,11 @@ class Game
 private
 
   def start_game
-    action = ""
     initialize_game
 
     while @player.alive?
+      action = ""
+
       @current_room = @world.get_room(@player)
 
       unless MISC_ACTIONS.include?(action)
@@ -80,6 +81,8 @@ private
     puts "west: moves the character west"
     puts "status: shows the current player status"
     puts "exit: exits the game"
+    puts ""
+    puts ""
   end
 
   def status
