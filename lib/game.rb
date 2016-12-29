@@ -69,8 +69,6 @@ private
   end
 
   def help
-    # toDo: flesh this out a bit more
-    # toDo: this still moves the player one step, we'll need to fix that up
     puts ""
     puts ""
     puts "RGP -- Text Based RPG"
