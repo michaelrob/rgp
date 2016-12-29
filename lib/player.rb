@@ -42,7 +42,7 @@ class Player
 
   def status
     puts "Player Status"
-    putst "#{@name} - #{@title}"
+    putst "#{@name} #{@title}"
     puts "Current hitpoints: #{@hit_points}"
   end
 end
