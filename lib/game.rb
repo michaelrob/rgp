@@ -81,6 +81,7 @@ private
     puts "east: moves the character east"
     puts "west: moves the character west"
     puts "status: shows the current player status"
+    puts "help: shows this screen"
     puts "exit: exits the game"
     puts ""
     puts ""
