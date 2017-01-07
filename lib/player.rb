@@ -48,6 +48,8 @@ class Player
   def status
     puts "Player Status"
     putst "#{@name} #{@title}"
-    puts "Current hitpoints: #{@hit_points}"
+    puts "HP: #{@hit_points}/#{MAX_HIT_POINTS}"
+    puts "AP: #{@attack_power}"
+    puts ""
   end
 end
