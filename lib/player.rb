@@ -31,6 +31,11 @@ class Player
     kill if @hit_points <= 0
   end
 
+  def heal(amount)
+    @hit_points += amount
+    @hit_points = [@hit_points, MAX_HIT_POINTS].min
+  end
+
   def alive?
     @hit_points > 0
   end
