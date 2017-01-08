@@ -26,6 +26,10 @@ class Player
     @title = new_title
   end
 
+  def can_move(direction)
+    @current_room.has_room_to_the?(direction)
+  end
+
   def hurt(amount)
     @hit_points -= amount
     kill if @hit_points <= 0

@@ -19,6 +19,9 @@ class Room
     "You are in a #{@size} room. It is #{@adjective}"
   end
 
+  def has_toom_to_the?(direction)
+  end
+
 private
 
   def get_content
