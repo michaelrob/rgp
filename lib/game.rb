@@ -62,10 +62,11 @@ private
     @player.status if action == :status
 
     # State changing actions
-    @world.move_north(@player) if action == :north
-    @world.move_south(@player) if action == :south
-    @world.move_east(@player)  if action == :east
-    @world.move_west(@player)  if action == :west
+    @world.move_north(@player)      if action == :north
+    @world.move_south(@player)      if action == :south
+    @world.move_east(@player)       if action == :east
+    @world.move_west(@player)       if action == :west
+    @current_room.interact(@player) if action == :take
   end
 
   def help
