@@ -91,7 +91,6 @@ private
     puts "You are at map coordinates [#{@player.x_pos}, #{@player.y_pos}]"
 
     puts @current_room
-    # toDo: we'll need to also list content in the room
-    # puts "you see @room.content"
+    puts "You see #{@current_room.content}." if @current_room.content
   end
 end
