@@ -9,6 +9,10 @@ class Room
 
   # ToDo: this needs to be fleshed out when we get some content added
   def interact
+    if @content
+      @content.interact(player)
+      @content = nil
+    end
   end
 
   def to_s
@@ -18,6 +22,7 @@ class Room
 private
 
   def get_content
+    [Monster, Item].sample.new
   end
 
   def get_size
