@@ -23,7 +23,6 @@ class Room
   end
 
 private
-
   def get_content
     [Potion, Item].sample.new
   end
