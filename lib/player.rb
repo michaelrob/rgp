@@ -37,7 +37,7 @@ class Player
 
   def heal(amount)
     @hit_points += amount
-    @hit_points = [@hit_points, MAX_HIT_POINTS].min
+    @hit_points = [@hit_points, MAX_HITPOINTS].min
   end
 
   def alive?
@@ -51,8 +51,8 @@ class Player
 
   def status
     puts "Player Status"
-    putst "#{@name} #{@title}"
-    puts "HP: #{@hit_points}/#{MAX_HIT_POINTS}"
+    puts "#{@name} #{@title}"
+    puts "HP: #{@hit_points}/#{MAX_HITPOINTS}"
     puts "AP: #{@attack_power}"
     puts ""
   end
