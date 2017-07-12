@@ -1,28 +1,24 @@
-class World
-  HEIGHT = 10
-  WIDTH = 10
-
-  def initialize
-    @rooms = Array.new(HEIGHT, Array.new(WIDTH))
+class World 
+  def initialize(tiles)
+    @tiles = tiles
   end
 
-  def move_north(player)
-    player.y_pos -= 1 if player.y_pos > 0
+  def name
+    @name
   end
 
-  def move_south(player)
-    player.y_pos += 1 if player.y_pos < HEIGHT - 1
+  def name=(new_name)
+    @name = new_name
   end
 
-  def move_east(player)
-    player.x_pos += 1 if player.x_pos < HEIGHT - 1
+  def tiles
+    @tiles
   end
 
-  def move_west(player)
-    player.x_pos -= 1 if player.x_pos > 0
-  end
-
-  def get_room(player)
-    @rooms[player.x_pos][player.y_pos] ||= Room.new
+  def draw
+    @tiles.each do |tile|
+      print tile.glyph
+      # puts '' if tile.row == @width - 1
+    end
   end
 end
