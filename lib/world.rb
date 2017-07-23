@@ -1,6 +1,8 @@
 class World 
-  def initialize(tiles)
+  def initialize(tiles, width, height)
     @tiles = tiles
+    @width = width
+    @height = height
   end
 
   def name
@@ -15,10 +17,22 @@ class World
     @tiles
   end
 
+  def width
+    @width
+  end
+
+  def height
+    @height
+  end
+
+  def get_cell(col, row)
+    @tiles[col, row]
+  end
+
   def draw
     @tiles.each do |tile|
       print tile.glyph
-      # puts '' if tile.row == @width - 1
+      puts '' if tile.row == @width - 1
     end
   end
 end

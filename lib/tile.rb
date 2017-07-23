@@ -3,10 +3,12 @@ class Tile
     :floor, :wall, :bounds
   ]
 
-  def initialize(glyph, colour, state)
+  def initialize(glyph, colour, state, col, row)
     @glyph = glyph
     @colour = colour
     @state = state
+    @col = col
+    @row = row
   end
 
   def glyph
@@ -15,6 +17,14 @@ class Tile
 
   def state
     @state
+  end
+
+  def col
+    @col
+  end
+
+  def row
+    @row
   end
 
   def isDiggable?

@@ -8,7 +8,7 @@ class WorldBuilder
   end
 
   def build()
-    World.new(@tiles)
+    World.new(@tiles, @width, @height)
   end
   
 private
@@ -16,7 +16,7 @@ private
   def make()
     # fills out @tiles with a new matrix of tiles
     Matrix.build(@height, @width) do |w, h|
-      Tile.new('*', :blue, :floor)
+      Tile.new('*', :blue, :floor, w, h)
     end
   end
   

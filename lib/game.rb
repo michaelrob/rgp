@@ -1,6 +1,7 @@
 class Game
   def initialize
     @steps = 0
+    # This needs to be replaced at some stage with something to realod the current map
     @world = generate_world()
 
     start_game
