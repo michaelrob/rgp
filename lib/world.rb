@@ -1,4 +1,4 @@
-class World 
+class World
   def initialize(tiles, width, height)
     @tiles = tiles
     @width = width
@@ -31,8 +31,8 @@ class World
 
   def draw
     @tiles.each do |tile|
-      print tile.glyph
-      puts '' if tile.row == @width - 1
+      # print tile.glyph
+      # puts '' if tile.row == @width - 1
     end
   end
 end

@@ -7,3 +7,6 @@ gem 'rspec-rails'
 gem 'pry-rails'
 gem "pry"
 gem 'pry-inline'
+
+# gosu
+gem 'gosu'

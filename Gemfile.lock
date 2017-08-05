@@ -24,6 +24,7 @@ GEM
     coderay (1.1.1)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    gosu (0.12.1)
     i18n (0.7.0)
     json (1.8.3)
     loofah (2.0.3)
@@ -89,6 +90,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  gosu
   pry
   pry-inline
   pry-rails
@@ -96,4 +98,4 @@ DEPENDENCIES
   rspec-rails
 
 BUNDLED WITH
-   1.11.2
+   1.15.1

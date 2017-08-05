@@ -1,4 +1,5 @@
 require 'matrix'
+require 'color'
 
 class WorldBuilder
   def initialize(width, height)
@@ -10,16 +11,15 @@ class WorldBuilder
   def build()
     World.new(@tiles, @width, @height)
   end
-  
+
 private
 
   def make()
-    # fills out @tiles with a new matrix of tiles
     Matrix.build(@height, @width) do |w, h|
-      Tile.new('*', :blue, :floor, w, h)
+      Tile.new('#', Color.blue, :floor, w, h)
     end
   end
-  
+
   def smooth(times)
     puts "smoothing"
   end
